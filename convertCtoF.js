@@ -1,7 +1,8 @@
+// Convert Celsius to Fahrenheit
+
 function convertToFahrenheit(value) {
-  let fahrenheit = value * 1.8 + 32;
-  console.log(fahrenheit);
+  return value * 1.8 + 32;
 }
 
-let result = convertToFahrenheit(prompt('Celsius: '));
-console.log(result);
+let result = convertToFahrenheit(prompt("Celsius: "));
+console.log(`o valor em Fahrenheit é: ${result}`);
