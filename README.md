@@ -4,3 +4,5 @@ Exercícios das aulas de JavaScript básico e JavaScript II da minha participaç
 ## FizzBuzz
 
 ## Reverse A String
+
+## Convert Celsius to Fahrenheit
