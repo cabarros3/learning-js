@@ -2,6 +2,31 @@ const listContainer = document.querySelector("[data-lists]");
 const newListForm = document.querySelector("[data-new-list-form]");
 const newListInput = document.querySelector("[data-new-list-input]");
 
-newListForm.addEventListener("submit", function (e) {});
+let lists = [];
+
+newListForm.addEventListener("submit", function (e) {
+    e.preventDefault()
+    const listName = newListInput.value;
+    if (listName === null || listName === "") return;
+    const list = createList(listName);
+    newListInput.value = null;
+    lists.push(list);
+    render();
+});
+
+function render(){
+    lists.forEach(function(list) {
+        const item = document.createElement('li')
+        item.classList.add('item')
+        item.innerText = list.name
+        listContainer.appendChild(item)
+    })
+}
+
+function createList(){
+    return {id: Date.now().toString(), name: name };
+}
+
+render()
 
 // dica: toda vez que um submit é recebido a página é atualizada
